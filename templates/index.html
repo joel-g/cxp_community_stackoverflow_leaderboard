@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Azure CXP Community Stack Overflow Leaderboard</title>
+    </head>
+    <body>
+        <ul class='user'>
+            {% for user in users %}
+                <li><b></li>{{ user.display_name }}</b></li>
+                <li>Total Rep: {{ user.reputation }}</li>
+                <li>Week Rep: {{ user.reputation_change_week }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
