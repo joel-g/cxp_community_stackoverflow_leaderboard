@@ -1,13 +1,23 @@
 <html>
     <head>
         <title>Azure CXP Community Stack Overflow Leaderboard</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
     </head>
     <body>
+        <nav>
+            <a href='/'>Rep this week</a> | 
+            <a href='/total'>Total rep</a> |
+            <a href='/month'>Rep this month</a>
+        </nav>
+        <h1>{{ title }}</h1>
         <ul class='user'>
             {% for user in users %}
-                <li><b></li>{{ user.display_name }}</b></li>
+                <li><img src={{user.profile_image}}></li>
+                <li class='name'><b><a href={{user.link}}>{{ user.display_name }}</a></b></li>
                 <li>Total Rep: {{ user.reputation }}</li>
-                <li>Week Rep: {{ user.reputation_change_week }}</li>
+                <li>Change this week: {{ user.reputation_change_week }}</li>
+                <li>Change this month: {{ user.reputation_change_month }}</li>
+                <br>
             {% endfor %}
         </ul>
     </body>
