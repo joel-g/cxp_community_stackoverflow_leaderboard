@@ -1,24 +1,26 @@
 <html>
     <head>
         <title>Azure CXP Community Stack Overflow Leaderboard</title>
-        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href={{ url_for('static',filename='styles/style.css') }} >
     </head>
     <body>
         <nav>
             <a href='/'>Rep this week</a> | 
+            <a href='/month'>Rep this month</a> | 
             <a href='/total'>Total rep</a> |
-            <a href='/month'>Rep this month</a>
         </nav>
         <h1>{{ title }}</h1>
-        <ul class='user'>
-            {% for user in users %}
-                <li><img src={{user.profile_image}}></li>
-                <li class='name'><b><a href={{user.link}}>{{ user.display_name }}</a></b></li>
-                <li>Total Rep: {{ user.reputation }}</li>
-                <li>Change this week: {{ user.reputation_change_week }}</li>
-                <li>Change this month: {{ user.reputation_change_month }}</li>
-                <br>
-            {% endfor %}
-        </ul>
+        {% for user in users %}
+            <span class='user'>
+                <b>{{loop.index}}</b>         
+                <ul class='list'>
+                    <li><img src={{user.profile_image}} class='profile-pic'></li>
+                    <li class='name'><b><a href={{user.link}}>{{ user.display_name }}</a></b></li>
+                    <li>Total Rep: {{ user.reputation }}</li>
+                    <li>Change this week: {{ user.reputation_change_week }}</li>
+                    <li>Change this month: {{ user.reputation_change_month }}</li>
+                </ul>
+            </span>
+        {% endfor %}
     </body>
 </html>

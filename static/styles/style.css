@@ -1,0 +1,53 @@
+body {
+    background-color: deepskyblue;
+    font-family: sans-serif;
+}
+.user {
+    display: inline-block;
+    background-color: ghostwhite;
+    border-radius: 5px;
+    padding: 10px 10px 10px 0;
+    margin: 2px;
+}
+
+.profile-pic {
+    height: 60px;
+    width: 60px;   
+}
+
+.rank {
+    font-size: 15px;
+}
+
+h3 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.list {
+    list-style: none;
+}
+
+nav {
+    margin: 0 auto; 
+}
+
+.badge1, .badge2, .badge3 {
+    margin-right: 3px;
+    margin-left: 2px;
+    width: 6px;
+    height: 6px;
+}
+
+.badge3 {
+    color: #EFF0F1;
+}
+
+.badge2 {
+    color: #EDEEEF;
+}
+
+.badge1 {
+    color: ##EDEEEF
+}
+
