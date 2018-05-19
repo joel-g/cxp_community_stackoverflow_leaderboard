@@ -10,6 +10,34 @@ body {
     margin: 2px;
 }
 
+.gold, .silver, .bronze {
+    padding: 3px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.gold {
+    color: #FFCB00;
+    background-color: #FFF8E1;
+    border-color: #FFCB00;
+}
+
+.silver {
+    color: #B3B7BB;
+    border-color: #B3B7BB;
+}
+
+.bronze {
+    color: #D0A583;
+    border-color: #D0A583;
+}
+
+.medals {
+    margin-top: 3px;
+    align-content: center;
+    margin: 0 auto;
+}
+
 .profile-pic {
     height: 60px;
     width: 60px;   
@@ -32,26 +60,3 @@ nav {
     margin: 0 auto; 
 }
 
-.gold, .silver, .bronze {
-    padding: 3px;
-    border: 1px solid
-}
-
-.gold {
-    color: #FFCB00;
-    border-color: #FFCB00;
-}
-
-.silver {
-    color: #B3B7BB;
-    border-color: #B3B7BB;
-}
-
-.bronze {
-    color: #D0A583;
-    border-color: #D0A583;
-}
-
-.medals {
-    margin: 0 auto;
-}

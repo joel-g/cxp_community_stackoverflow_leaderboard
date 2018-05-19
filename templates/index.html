@@ -5,11 +5,12 @@
     </head>
     <body>
         <nav>
+            <h1>{{ title }}</h1>
             <a href='/'>Total rep</a> | 
             <a href='/month'>Rep this month</a> | 
             <a href='/week'>Rep this week</a>
         </nav>
-        <h1>{{ title }}</h1>
+        
         {% for user in users %}
             <span class='user'>
                 <b>{{loop.index}}</b>         
@@ -19,12 +20,15 @@
                     <li>Total Rep: {{ user.reputation }}</li>
                     <li>Change this week: {{ user.reputation_change_week }}</li>
                     <li>Change this month: {{ user.reputation_change_month }}</li>
+                    <li>
+                        <div class='medals'>
+                            <span class='gold'>{{ user.badge_counts.gold }} ⏺</span>
+                            <span class='silver'>{{ user.badge_counts.silver }} ⏺</span>
+                            <span class='bronze'>{{ user.badge_counts.bronze }} ⏺</span>
+                        </div>
+                    </li>
                 </ul>
-                <div class='medals'>
-                    <span class='gold'>{{ user.badge_counts.gold }} ⏺</span>
-                    <span class='silver'>{{ user.badge_counts.silver }} ⏺</span>
-                    <span class='bronze'>{{ user.badge_counts.bronze }} ⏺</span>
-                </div>
+                
             </span>
         {% endfor %}
     </body>
