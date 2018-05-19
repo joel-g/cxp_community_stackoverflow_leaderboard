@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-STACK_IDS=('8826629','9541448', '6591675', '7452904', '9393813', '8840926', '9454112', '7287446', '9598801', )
+STACK_IDS=('8826629','9541448', '6591675', '7452904', '9393813', '8840926', '9454112', '7287446', '9598801', '9541439', '' )
 
 def get_user(user_id):
     res = requests.get("http://api.stackexchange.com/2.2/users/" + user_id + "?order=desc&sort=reputation&site=stackoverflow")
@@ -30,3 +30,6 @@ def total(users=None):
 def month(users=None):
     jsons = pagify_users("reputation_change_month")
     return render_template('index.html', users=jsons, title="Rep Change this Month")
+
+if __name__ == '__main__':
+    app.run()
