@@ -5,9 +5,9 @@
     </head>
     <body>
         <nav>
-            <a href='/'>Rep this week</a> | 
+            <a href='/'>Total rep</a> | 
             <a href='/month'>Rep this month</a> | 
-            <a href='/total'>Total rep</a> |
+            <a href='/week'>Rep this week</a>
         </nav>
         <h1>{{ title }}</h1>
         {% for user in users %}
@@ -20,6 +20,11 @@
                     <li>Change this week: {{ user.reputation_change_week }}</li>
                     <li>Change this month: {{ user.reputation_change_month }}</li>
                 </ul>
+                <div class='medals'>
+                    <span class='gold'>{{ user.badge_counts.gold }} ⏺</span>
+                    <span class='silver'>{{ user.badge_counts.silver }} ⏺</span>
+                    <span class='bronze'>{{ user.badge_counts.bronze }} ⏺</span>
+                </div>
             </span>
         {% endfor %}
     </body>

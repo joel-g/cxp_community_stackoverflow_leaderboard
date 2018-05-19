@@ -32,22 +32,26 @@ nav {
     margin: 0 auto; 
 }
 
-.badge1, .badge2, .badge3 {
-    margin-right: 3px;
-    margin-left: 2px;
-    width: 6px;
-    height: 6px;
+.gold, .silver, .bronze {
+    padding: 3px;
+    border: 1px solid
 }
 
-.badge3 {
-    color: #EFF0F1;
+.gold {
+    color: #FFCB00;
+    border-color: #FFCB00;
 }
 
-.badge2 {
-    color: #EDEEEF;
+.silver {
+    color: #B3B7BB;
+    border-color: #B3B7BB;
 }
 
-.badge1 {
-    color: ##EDEEEF
+.bronze {
+    color: #D0A583;
+    border-color: #D0A583;
 }
 
+.medals {
+    margin: 0 auto;
+}
