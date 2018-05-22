@@ -13,9 +13,9 @@
         
         {% for user in users %}
             <span class='user'>
-                <b>{{loop.index}}</b>         
+                        
                 <ul class='list'>
-                    <li><img src={{user.profile_image}} class='profile-pic'></li>
+                    <li><img src={{user.profile_image}} class='profile-pic'><span class='rank'><b>#{{loop.index}}</b></span></li>
                     <li class='name'><b><a href={{user.link}}>{{ user.display_name }}</a></b></li>
                     <li>Total Rep: {{ user.reputation }}</li>
                     <li>Change this week: {{ user.reputation_change_week }}</li>

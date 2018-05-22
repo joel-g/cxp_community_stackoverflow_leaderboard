@@ -5,9 +5,9 @@ body {
 .user {
     display: inline-block;
     background-color: ghostwhite;
-    border-radius: 5px;
-    padding: 5px 5px 5px 0;
-    margin: 2px;
+    border-radius: 15px;
+    padding: 3px;
+    margin: 5px;
 }
 
 .gold, .silver, .bronze {
@@ -54,9 +54,16 @@ h3 {
 
 .list {
     list-style: none;
+    position: relative;
+    right: 16px;
 }
 
 nav {
-    margin: 0 auto; 
+    margin: 10 auto; 
 }
 
+.rank {
+    margin-left: 25px;
+    position: relative;
+    bottom: 25px;
+}
