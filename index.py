@@ -11,9 +11,7 @@ def get_user(user_id):
     # Don't steal my API key. Just get your own free one.
 
 def rank_users(order_by):
-    jsons = []
-    for user_id in STACK_IDS:
-        jsons.append(get_user(user_id))
+    jsons = map(get_user, STACK_IDS)
     jsons = sorted(jsons, key=lambda k: k[order_by], reverse=True)
     return jsons
 
