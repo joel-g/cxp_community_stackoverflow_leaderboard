@@ -7,7 +7,7 @@ body {
     background-color: ghostwhite;
     border-radius: 15px;
     padding: 3px;
-    margin: 5px;
+    margin: 4px;
 }
 
 .gold, .silver, .bronze {
@@ -66,4 +66,13 @@ nav {
     margin-left: 25px;
     position: relative;
     bottom: 25px;
+}
+
+.title {
+    display: inline;
+}
+
+.links {
+    font-size: 20px;
+    margin-left: 30px;
 }
