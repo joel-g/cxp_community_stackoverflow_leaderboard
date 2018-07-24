@@ -1,15 +1,16 @@
 <html>
     <head>
-        <title>Azure CXP Community Stack Overflow Leaderboard</title>
+        <title>Sample Stack Overflow Leaderboard</title>
         <link rel="stylesheet" type="text/css" href={{ url_for('static',filename='styles/style.css') }} >
     </head>
     <body>
         <nav>
-            <div class='header'>Azure CXP Community Stack Overflow Reputation Leaderboard</div>
+            <div class='header'>Sample Stack Overflow Reputation Leaderboard</div>
             <h2 class='title'>{{ title }}</h2>
             <span class='links'><a href='/'>Total rep</a> | 
             <a href='/month'>Rep this month</a> | 
             <a href='/week'>Rep this week</a></span>
+            <div>Customize this project for your team: <a href="https://github.com/joel-g/StackOverFlow_Reputation_Leaderboard_Python_Sample">https://github.com/joel-g/StackOverFlow_Reputation_Leaderboard_Python_Sample</a></div>
         </nav>
         {% for user in users %}
             <span class='user'>
